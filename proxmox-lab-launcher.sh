@@ -52,9 +52,9 @@ function home_automation_menu() {
   echo "0) Back"
   read -rp "Choose an option: " choice
   case $choice in
-    1) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/homeassistant.sh);;
-    2) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/node-red.sh);;
-    3) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/esphome.sh);;
+    1) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/homeassistant.sh);;
+    2) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/node-red.sh);;
+    3) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/esphome.sh);;
     0) main_menu;;
     *) echo "${RED}Invalid choice.${RESET}"; pause; home_automation_menu;;
   esac
@@ -71,10 +71,10 @@ function networking_menu() {
   echo "0) Back"
   read -rp "Choose an option: " choice
   case $choice in
-    1) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/vm/openwrt.sh);;
-    2) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/vm/opnsense.sh);;
-    3) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/adguardhome.sh);;
-    4) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/pihole.sh);;
+    1) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/vm/openwrt.sh);;
+    2) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/vm/opnsense.sh);;
+    3) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/adguardhome.sh);;
+    4) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/pihole.sh);;
     0) main_menu;;
     *) echo "${RED}Invalid choice.${RESET}"; pause; networking_menu;;
   esac
@@ -91,10 +91,10 @@ function self_hosting_menu() {
   echo "0) Back"
   read -rp "Choose an option: " choice
   case $choice in
-    1) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/docker-ce.sh);;
-    2) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/portainer.sh);;
-    3) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/nginxproxymanager.sh);;
-    4) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/nextcloud.sh);;
+    1) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/docker-ce.sh);;
+    2) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/portainer.sh);;
+    3) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/nginxproxymanager.sh);;
+    4) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/nextcloud.sh);;
     0) main_menu;;
     *) echo "${RED}Invalid choice.${RESET}"; pause; self_hosting_menu;;
   esac
@@ -111,10 +111,10 @@ function entertainment_menu() {
   echo "0) Back"
   read -rp "Choose an option: " choice
   case $choice in
-    1) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/jellyfin.sh);;
-    2) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/plex.sh);;
-    3) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/kavita.sh);;
-    4) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/audiobookshelf.sh);;
+    1) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/jellyfin.sh);;
+    2) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/plex.sh);;
+    3) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/kavita.sh);;
+    4) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/audiobookshelf.sh);;
     0) main_menu;;
     *) echo "${RED}Invalid choice.${RESET}"; pause; entertainment_menu;;
   esac
@@ -131,10 +131,10 @@ function testing_menu() {
   echo "0) Back"
   read -rp "Choose an option: " choice
   case $choice in
-    1) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/vm/kali.sh);;
-    2) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/kasm.sh);;
+    1) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/vm/kali.sh);;
+    2) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/kasm.sh);;
     3) echo "${YELLOW}Launching your custom TheHacker VM...${RESET}";;
-    4) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/vm/windows10.sh);;
+    4) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/vm/windows10.sh);;
     0) main_menu;;
     *) echo "${RED}Invalid choice.${RESET}"; pause; testing_menu;;
   esac
@@ -150,8 +150,8 @@ function dashboards_menu() {
   echo "0) Back"
   read -rp "Choose an option: " choice
   case $choice in
-    1) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/uptime-kuma.sh);;
-    2) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/lxc/netdata.sh);;
+    1) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/uptime-kuma.sh);;
+    2) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/lxc/netdata.sh);;
     3) echo "${YELLOW}Please install Grafana and Prometheus manually or create a helper script entry.${RESET}";;
     0) main_menu;;
     *) echo "${RED}Invalid choice.${RESET}"; pause; dashboards_menu;;
@@ -168,7 +168,7 @@ function utilities_menu() {
   echo "0) Back"
   read -rp "Choose an option: " choice
   case $choice in
-    1) bash <(curl -s https://community-scripts.github.io/ProxmoxVE/helper/menu.sh);;
+    1) bash <(curl -s https://raw.githubusercontent.com/tteck/Proxmox/main/helper/menu.sh);;
     2) apt update && apt full-upgrade -y;;
     3) reboot;;
     0) main_menu;;
